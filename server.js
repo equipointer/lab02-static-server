@@ -26,4 +26,4 @@ var server = http.createServer(function (req, res) { //dentro de los parentesis 
 //va a resivir 3 parametros 1. el puerto 2. La direccion IP. 3. call back function sin parametros
 server.listen(PORT, IP, function () {
     console.log(`> Server listering @http://${IP}:${PORT}`);
-}); //server que contesta
+}); //server que contestas
