@@ -7,7 +7,7 @@
 var fs = require("fs");
 var objconfig = JSON.parse(fs.readFileSync("./config/config.json","utf-8"));  //le archivo de forma sincrona
 // resource path cuando se trabaja en Back-End usar rutas absolutas.
-objconfig.IP = process.env.IP || objconfig.ip;
+objconfig.IP = process.env.IP || objconfig.IP;
 objconfig.PORT = process.env.PORT || objconfig.PORT;
 
 module.exports = objconfig;
