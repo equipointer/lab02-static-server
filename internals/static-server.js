@@ -2,7 +2,7 @@
 //Para crear mi servidor estatico
 
 var fs = require('fs'),
-    config = require('../config/config.js');
+    config = require('../config/config.js');//lectura de paquetes desde punto de vista del programa
     mime = require('mime');
 
 //Exportar la funcion de Servidor estatico

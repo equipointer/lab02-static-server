@@ -1,0 +1,26 @@
+{
+  "name": "lab02-static-server",
+  "description": "Server web Static Node",
+  "main": "server.js",
+  "authors": [
+    "@voxbel"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "static",
+    "server"
+  ],
+  "homepage": "https://github.com/equipointer/lab02-static-server",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "^1.1.3"
+  }
+}

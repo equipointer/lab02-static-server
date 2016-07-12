@@ -1,6 +1,6 @@
 {
 "IP":"127.0.0.1",
 "PORT":3000,
-"STATIC_PATH":"C:/Users/pc1/pwm/lab02-static-server/static"
+"STATIC_PATH":"./static"
 
 }

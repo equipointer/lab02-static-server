@@ -3,6 +3,7 @@ var http = require("http");
 var fs = require('fs'); // libreria para leer archivo
 //Obteniendo informacion del entorno de ejecucion con respecto al puerto que debemos usar 
 //en nuestro server
+var colors=require('colors');
 var config = require("./config/config.js");
 var staticServer = require('./internals/static-server');
 
@@ -37,11 +38,12 @@ var server = http.createServer(function (req, res) { //dentro de los parentesis 
     //res.end();*/
 //Obtener la URL del archivo
     var url = req.url;//obtenemos del metodo req la url
-    var path_nombre = (url.parse(url.url).STATIC_PATH == '/') ? '/index.html' : url.parse(peticion.url).STATIC_PATH;
-    var ruta_a_archivo = '/static' + path_nombre;
-
-
-    //Sirvo la url con mi servidor estatico
+   //Sirvo la url con mi servidor estatico
+   if(url =="/"){
+       //sirve el index
+       url="/index.html";
+   }
+   console.log(`>URL Solicitada ${url}...`.yellow);
     staticServer.serve(url, res);
 });
 
