@@ -4,6 +4,7 @@ var fs = require('fs'); // libreria para leer archivo
 //Obteniendo informacion del entorno de ejecucion con respecto al puerto que debemos usar 
 //en nuestro server
 var colors=require('colors');
+var handlers = require('./internals/handlers'); //objeto el nombre del objeto es una ruta
 var config = require("./config/config.js");
 var staticServer = require('./internals/static-server');
 
@@ -33,7 +34,7 @@ var server = http.createServer(function (req, res) { //dentro de los parentesis 
         }
     });
     //Enviamos la respuesta
-    //res.write("<h1>Hola, bienvenido a mi server <<<---->vox<--->>></h1>"); //al escribir write se envia informacion que desea resivir
+    //res.write("<h1>Hola, bienvenido a mi server <<<---->vox<--->>></h1>"); //al escribir write se envia informacion que desea recibir
     //Cerrar la conexion
     //res.end();*/
 //Obtener la URL del archivo
@@ -43,13 +44,21 @@ var server = http.createServer(function (req, res) { //dentro de los parentesis 
        //sirve el index
        url="/index.html";
    }
-   console.log(`>URL Solicitada ${url}...`.yellow);
+   // Verificando que la peticion del cliente sea una ruta virtual
+if(typeof(handlers[url]) === 'function'){
+    // Si entro aqui, significa que existe un manejador para la URl que se esta solicitando por lo tanto la ejecuto.
+    handlers[url](req, res)
+    }else {
+    console.log(`>URL Solicitada ${url}...`.yellow);
     staticServer.serve(url, res);
+    }
+
+   
 });
 
 
 // Poner a trabajar al server 
-//va a resivir 3 parametros 1. el puerto 2. La direccion IP. 3. call back function sin parametros
+// va a resivir 3 parametros 1. el puerto 2. La direccion IP. 3. call back function sin parametros
 server.listen(PORT, IP, function () {
     console.log(`> Server listering @http://${IP}:${PORT}`);
 }); //server que contestas
