@@ -58,7 +58,7 @@ if(typeof(handlers[url]) === 'function'){
 
 
 // Poner a trabajar al server 
-// va a resivir 3 parametros 1. el puerto 2. La direccion IP. 3. call back function sin parametros
+// va a resibir 3 parametros 1. el puerto 2. La direccion IP. 3. call back function sin parametros
 server.listen(PORT, IP, function () {
     console.log(`> Server listering @http://${IP}:${PORT}`);
 }); //server que contestas
