@@ -1,4 +1,5 @@
 //Manejadores de rutas virtuales
+var fortune = require("./fortune"); // Cargar modulo
 var fechaDeNac = new Date();
 
 var fechaDeNac = new Date(1982,11,23,2,00);
@@ -20,19 +21,23 @@ module.exports = {
     },
     //estamos llamando otra function
     "/getfortune": function (req, res){
-        //Contestar con un json, y se obtiene mensaje de la forma
+   /*     //Contestar con un json, y se obtiene mensaje de la forma
         var fortunePaper = {
             "mensaje":
             "La honestidad es un regalo caro, no lo esperes de gente baratisima"
         };
+        //Parsenado a string el objetoRespuesta de respuesta
+        var jsonResponse=JSON.stringify(fortunePaper);*/
+        fortune.getFortune(function (fortunePaper){
+
         //configura el contenido de respuesta HTTP
         res.writeHead(200, {
             "Content-Type" : "application/JSON"
         });
-        //Parsenado a string el objetoRespuesta de respuesta
-        var jsonResponse=JSON.stringify(fortunePaper);
+        
         //responde el Objeto
-        res.end(jsonResponse);
-    }
+        res.end(fortunePaper);
+    });
 
+}
 };
