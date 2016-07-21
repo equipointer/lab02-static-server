@@ -17,6 +17,22 @@ module.exports = {
         var RespuestaJSON = JSON.stringify(objetoRespuesta);
         // Envio respuesta al cliente
         res.end(RespuestaJSON);
+    },
+    //estamos llamando otra function
+    "/getfortune": function (req, res){
+        //Contestar con un json, y se obtiene mensaje de la forma
+        var fortunePaper = {
+            "mensaje":
+            "La honestidad es un regalo caro, no lo esperes de gente baratisima"
+        };
+        //configura el contenido de respuesta HTTP
+        res.writeHead(200, {
+            "Content-Type" : "application/JSON"
+        });
+        //Parsenado a string el objetoRespuesta de respuesta
+        var jsonResponse=JSON.stringify(fortunePaper);
+        //responde el Objeto
+        res.end(jsonResponse);
     }
 
 };
