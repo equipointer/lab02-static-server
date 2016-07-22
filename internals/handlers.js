@@ -21,6 +21,7 @@ module.exports = {
     },
     //estamos llamando otra function
     "/getfortune": function (req, res){
+        console.log("<Se solicita fortuna...>");
    /*     //Contestar con un json, y se obtiene mensaje de la forma
         var fortunePaper = {
             "mensaje":
