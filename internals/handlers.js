@@ -1,44 +1,37 @@
-//Manejadores de rutas virtuales
-var fortune = require("./fortune"); // Cargar modulo
-var fechaDeNac = new Date();
+// Manejadores de rutas virtuales
+var fortune = require("./fortune");
 
-var fechaDeNac = new Date(1982,11,23,2,00);
+var fechaDeNacimiento = new Date(1981,10,22,1,45);
 module.exports = {
-    "/edad/Abel-Gomora": function (req, res) {
-        res.writeHead(200, {
-            "Content-Type": "application/json"
+    "/edad/ivan-rivalcoba" : function(req, res){
+        res.writeHead(200,{
+            "Content-Type" : "application/json"
         });
-        //Calculo la Edad Actual
-        var hoy= new Date();
-        var age = Math.ceil((hoy - fechaDeNac)/(1000*3600*24*365));
-        //armamos respuesta JSON
+        // Calculo la edad
+        var hoy = new Date();
+        var age = 
+        Math.ceil((hoy - fechaDeNacimiento)/(1000*3600*24*365))
+        // Armando el json
         var objetoRespuesta = {
-            "edad": age
+            "edad" : age
         };
-        var RespuestaJSON = JSON.stringify(objetoRespuesta);
-        // Envio respuesta al cliente
-        res.end(RespuestaJSON);
+        var jsonResponse = 
+        JSON.stringify(objetoRespuesta);
+        // Envio la respuesta al cliente
+        res.end(jsonResponse); 
     },
-    //estamos llamando otra function
-    "/getfortune": function (req, res){
-        console.log("<Se solicita fortuna...>");
-   /*     //Contestar con un json, y se obtiene mensaje de la forma
-        var fortunePaper = {
-            "mensaje":
-            "La honestidad es un regalo caro, no lo esperes de gente baratisima"
-        };
-        //Parsenado a string el objetoRespuesta de respuesta
-        var jsonResponse=JSON.stringify(fortunePaper);*/
-        fortune.getFortune(function (fortunePaper){
-
-        //configura el contenido de respuesta HTTP
-        res.writeHead(200, {
-            "Content-Type" : "application/JSON"
+    "/getfortune": function(req, res){
+        console.log("> Se solicita fortuna...");
+        // // Se obtiene el mensaje de la suerte
+        fortune.getFortune(function(fortunePaper){
+            // Se configura el encabezado de respuesta
+            // HTTP
+            res.writeHead(200,{
+                "Content-Type" : "application/json"
+            });
+            console.log("Contestando: " + fortunePaper);
+            // Respondemos el Objeto
+            res.end(fortunePaper);
         });
-        
-        //responde el Objeto
-        res.end(fortunePaper);
-    });
-
-}
+    }
 };

@@ -1,12 +1,11 @@
 {
   "name": "lab02-static-server",
   "version": "0.0.0",
-  "description": "Server web Static Node",
-  "main": "index.js",
+  "description": "Servidor Web estatico en node",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
-    
   },
   "repository": {
     "type": "git",
@@ -14,10 +13,10 @@
   },
   "keywords": [
     "node",
-    "static",
-    "server"
+    "static-server",
+    "web"
   ],
-  "author": "@voxbel",
+  "author": "@vox_u2",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/equipointer/lab02-static-server/issues"

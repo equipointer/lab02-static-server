@@ -1,15 +1,15 @@
 {
   "name": "lab02-static-server",
-  "description": "Server web Static Node",
+  "description": "Servidor Web estatico en node",
   "main": "server.js",
   "authors": [
-    "@voxbel"
+    "@vox_u2"
   ],
   "license": "ISC",
   "keywords": [
     "node",
-    "static",
-    "server"
+    "static-server",
+    "web"
   ],
   "homepage": "https://github.com/equipointer/lab02-static-server",
   "private": true,

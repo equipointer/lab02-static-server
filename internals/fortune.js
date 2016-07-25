@@ -1,17 +1,14 @@
 var fortunePaper = {
-            "mensaje":
-            "La honestidad es un regalo caro, no lo esperes de gente baratisima"
+    "mensaje":
+    "La honestidad es un regalo caro, no lo esperes de gente barata"
 };
-
 module.exports = {
-    //metodo llamado 
     "getFortune" : function(cb){
-        //Convirtiendo el fortunePaper de objeto
+        // Convirtiendo el fortunePaper de objeto
         // a su version en string
-        fortunePaper = JSON.stringify(fortunePaper);
-        //Ejecutando el Call Back (cb) pasandole
-        //como parametro el fortunePaper string
-        cb(fortunePaper);
-
+        var fortunePaperResponse = JSON.stringify(fortunePaper);
+        // Ejecuto el callback (cb) pasandole
+        // como parametro el fortunepaper string
+        cb(fortunePaperResponse);
     }
-};  //exportar un Objeto
+};

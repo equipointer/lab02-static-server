@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./vendor/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="./vendor/materialize/dist/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Fortune Cookie</title>
+</head>
+
+<body>
+<!--Barra de Navegacion-->
+    <nav>
+        <div class="nav-wrapper brown lighten-3">
+            <a href="#" class="brand-logo">Fortune Cookie</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href=""><i class="material-icons left">home</i>INICIO</a></li>
+                <li><a href=""><i class="material-icons left">email</i>CONTACTO</a></li>
+                <li><a href=""><i class="material-icons left">assignment_ind</i>ABOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+     <!-- Etique de cabeceras -->
+    <div align="center" class="intro deep-blak lighten-2 z-depth-1">
+        <h1 class="black-text text-lighten-5" >Fortune Cookie</h1>
+    </div>
+<!--Imagenes Responsivas-->
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img src="./img/under.jpg" alt="" class="circle responsive-img">
+                    <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                    <span class="black-text">
+                Si tu fortuna quieres saber, la galleta de la suerte deber romper
+              </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contenido
+    <div align="center" id="cookie"><button onclick="getFortuneFromServer()">ROMPER LA GALLETA</button></div>
+-->
+    <div align="center">
+        <button class="btn waves-effect brown lighten-3" type="submit" name="action" onclick="getFortuneFromServer()">Romper la galleta
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+   
+    <div id="status">
+    </div>
+    <!--Seccion de Scripts-->
+    <script src="./vendor/jquery/dist/jquery.js"></script>
+    <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/site.js"></script>
+    <script src="./vendor/materialize/dist/js/materialize.min.js"></script>
+</body>
+</html>
