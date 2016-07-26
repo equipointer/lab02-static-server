@@ -3,7 +3,7 @@ var fortune = require("./fortune");
 
 var fechaDeNacimiento = new Date(1981,10,22,1,45);
 module.exports = {
-    "/edad/ivan-rivalcoba" : function(req, res){
+    "/edad/Abel-Gomora" : function(req, res){
         res.writeHead(200,{
             "Content-Type" : "application/json"
         });

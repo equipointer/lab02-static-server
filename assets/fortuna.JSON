@@ -1,0 +1,29 @@
+[
+    {
+         "_id":1, "message": "Un amigo solo pregunta por tu tiempo, no por tu dinero",  "q1" : true, "q2" : true 
+    },
+    {
+        "_id":2, "message": "Si te reusas a aceptar cualquier cosa, aceptando solo lo mejor, obtendras lo mejor mas a menudo", "q1" : false, "q2" : false 
+    },
+    {
+        "_id":3, "message": "Una sonrisa es el mejor pasaporte hacia el corazon de los que te rodean",  "q1" : true, "q2" : true 
+    },
+    {
+        "_id":4, "message": "La mejor forma de mantenerte saludable, es comer mas comida China",  "q1" : true, "q2" : false
+    },
+    {
+        "_id":5, "message": "Los cambios que vienen a tu vida doleran, pero te llevara a un camino mejor",  "q1" : false, "q2" : true 
+    },
+    {
+        "_id":6, "message": "Las personas son atraidas por tus encantos naturales",  "q1" : true, "q2" : true 
+    },
+    {
+        "_id":7, "message": "Si tu tienes algo bueno en tu vida no lo dejes ir",  "q1" : false, "q2" : true 
+    },
+    {
+        "_id":8, "message": "Tus zapatos te haran feliz hoy" , "q1" : true, "q2" : false 
+    },
+    {
+        "_id":9, "message": "El hombre o la mujer que tu deseas siente lo mismo por ti",  "q1" : true, "q2" : true 
+    }
+]
